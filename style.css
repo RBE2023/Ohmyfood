@@ -220,14 +220,34 @@ footer a {
 
 
 /* ****** Media queries ******** */
-/* pour les écrans qui dépassent 600 px */
+/* pour les écrans qui dépassent 768 px 
 @media screen and (min-width: 768px) {
 
-
-    .exempledeClass {
-        gap: 20px;
-    }
+.intro {
+    width: 50%;
 }
+    .deux {
+        width: 50%;
+    }
+    
+
+    .fonctionnement ol {        
+        gap: 20px;
+        margin-top: 30px;          
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .restaurant_gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    
+    }
+}*/
 
 /*  min with desktop : 1024px environ */
 @media screen and (min-width: 1024px) {
