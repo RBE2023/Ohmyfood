@@ -141,7 +141,7 @@ section {
     margin: 25px 0;
 }
 
-.card img {
+.imgRestaurant {
     object-fit: cover;
     border-radius: 20px 20px 0 0;
     height: 200px;
@@ -184,10 +184,10 @@ section {
 
 
 
-/* .coeur { */
-/* height: 21px; */
-/* width: 22px; */
-/* } */
+.coeur { 
+height: 21px;
+width: 22px;
+} 
 
 
 footer {
@@ -252,6 +252,7 @@ footer a {
 /*  min with desktop : 1024px environ */
 @media screen and (min-width: 1024px) {
 
+    
 .fonctionnement ol {
     display: flex;
     flex-wrap: nowrap;

@@ -18,6 +18,11 @@ body {
     /* padding: 40px; */
 }
 
+main {
+    position: relative;
+    bottom: 45px;
+}
+
 header {
     background-color: #ffffff;
     text-align: center;
