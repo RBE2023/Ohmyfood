@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;    
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -113,37 +113,36 @@ h1 {
     margin-bottom: 20px;
     padding: 20px;
     position: relative;
-    overflow: hidden;
+    overflow: hidden;   
+    transition: 1s;
 }
 
-.rectangleMenu:hover {
-
+.rectangleMenu:hover .price p{
     text-overflow: ellipsis;
     white-space: nowrap;
-
-    .price p, .check-mark-button {
-        transform: translateX(-71px);
-        transition: 1s;
-    }
-
-    /* .check-mark-button i{
-        transform: rotate(2.5turn) translate(1);
-    } */
+    transform: translateX(-71px);
+    transition-duration: 1s;    
 }
+
+.rectangleMenu:hover .check-mark-button {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transform: translateX(-71px);
+    transition-duration: 1s;    
+}
+
+
 
 .price {
     display: flex;
     justify-content: space-between;
     margin-top: 8px;
-    /* text-overflow: ellipsis; */
-    /* overflow: hidden; */
     white-space: nowrap;
 }
 
 .rectangleMenu span {
     text-overflow: ellipsis;
     overflow: hidden;
-
 }
 
 .check-mark-button {
@@ -157,7 +156,7 @@ h1 {
     position: absolute;
     right: 0px;
     top: 0px;
-    margin-right: -71px;
+    margin-right: -71px;    
 }
 
 .check-mark-button i {
@@ -170,30 +169,8 @@ h1 {
     width: 20px;
     border-radius: 50%;
     color: #99E2D0;
-    animation: rotate 1s 2s;
-    transform : rotate(45deg) 2s 1s;
-    
-    /* animation-direction: normal; */
-    /* animation-iteration-count: ; */
-    /* animation: rotate 1s 2s linear infinite; */
-    /* animation: rotate 1s 2s ease-in-out both; */
-    /* animation: rotate 2s forwards ease-in-out ; */
+    animation: rotate 1s 2s;   
 }
-
-    /* test rotation du checkmark i */
-
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);    }
-    
-    100% {
-        transform: rotate(720deg);
-    }
-
-}
-
-/* fin test rotation du checkmark i */
 
 .commande p {
     margin: auto;
@@ -296,7 +273,7 @@ footer a {
 /*  min with desktop : 1024px environ */
 @media screen and (min-width: 1024px) {
 
-    
+
     main {
         width: 85%;
     }
