@@ -3,7 +3,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
 }
 
 /* Variables couleurs: primaire, secondaire, tertiaire */
@@ -13,7 +12,32 @@ html {
     --tertiery: #99E2D0;
 }
 
-/* Loader */
+/* Le background Loader */
+.background-loader {
+    position: fixed;
+    height: 100vh;
+    background-color: whitesmoke;
+    inset: 0;
+    z-index: 1;
+    animation: disappear 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    transform-origin: top;
+}
+
+@keyframes disappear {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0)
+    }
+}
+
+/* Le loader Spinner */
 .loader {
     display: flex;
     border: 10px solid #4e4949;
@@ -24,12 +48,10 @@ html {
     border-right: var(--tertiery) 10px solid;
     border-left: var(--tertiery) 10px solid;
     border-radius: 50%;
-    animation-name: spin ;
-    animation-duration: 4s  ;
-    /* animation-delay: -0.1s; */
-    
-    /* placement du loader au centre de la page */
+    animation-name: spin;
+    animation-duration: 3s ;    
 
+    /* placement du loader au centre de la page */
     margin: auto;
     position: absolute;
     top: 0;
@@ -37,34 +59,29 @@ html {
     right: 0;
     bottom: 0;
     z-index: 1;
-    /* justify-content: center; */
-    /* align-items: center;     */
 }
 
-/* Animation du loader */
-
+/* Animation du loader spinner */
 @keyframes spin {
-    0% {transform: translate(-700px, -300px) rotate(0deg);
-        /* transform:  */
+    
+    0% {
+        transform: scale(0.5) rotate(0deg);
     }
+   
+    100% {
+        transform: scale(1.2) rotate(720deg);
+    }}
+/* fin Loader spinner*/
 
-    100% {transform: translate(0px, 0px) rotate(720deg);
-    }
 
-}
-
-/* fin Loader */
-/* animation des lettres Loading...*/
+/* animation des Lettres Loading...*/
 .loading {
     height: 100%;
     width: 100%;
     position: absolute;
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* top: 49%;
-    left: 46.5%;
-    transform: translate (-50%, -50%); */
+    align-items: center;    
     font-weight: bold;
 }
 
@@ -75,30 +92,35 @@ html {
     color: white;
     letter-spacing: 3px;
     animation: flash linear;
-    animation-delay: 3s;
-    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-duration: 3s;
 }
 
 @keyframes flash {
 
     0% {
         color: var(--secondary);
-        text-shadow: 0 0 1px var(--primary);         
-    }
-       
-    50% {
-        color: var(--tertiery);
-        text-shadow: 0 0 2px var(--primary);
-
-    }
-    90% {
-        color: white;
         text-shadow: 0 0 1px var(--primary);
     }
-    100% {
+
+    50% {
+        color: var(--tertiery);
+        text-shadow: 0 0 2px var(--tertiery);
+    }
+
+    80% {
+        color: white;
+        text-shadow: 0 0 1px var(--secondary);
+    }
+
+    90% {
         color: var(--secondary);
         text-shadow: 0 0 1px var(--secondary);
-        
+    }
+
+    100% {
+        color: var(--primary);
+        text-shadow: 0 0 1px var(--secondary);
     }
 }
 
@@ -134,12 +156,8 @@ html {
 
 
 
-
-
-
 body {
-    font-family: 'Roboto', sans-serif;
-    /* padding: 40px; */
+    font-family: 'Roboto', sans-serif;    
 }
 
 .first_container {
@@ -168,13 +186,11 @@ section {
 
 .localisation {
     font-weight: 600;
-    background-color: #EAEAEA;
-    /* height: 50px; */
+    background-color: #EAEAEA;    
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
     border-top: solid 2px rgb(212, 211, 211);
-
 }
 
 .intro {
@@ -187,7 +203,6 @@ section {
 
 .intro p {
     margin-top: 20px;
-
 }
 
 
@@ -220,8 +235,7 @@ section {
     margin-top: 20px;
 }
 
-.fonctionnement ol {
-    /* list-style-type: none;    */
+.fonctionnement ol {    
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -250,10 +264,9 @@ section {
     box-shadow: #0000008c 2px 1px 20px;
     cursor: pointer;
     transform: scale(1.05);
-
 }
 
-/*   test des chiffres blanc dans le petit cercle mauve */
+/* chiffres blanc dans le petit cercle mauve */
 .digit {
     border: var(--primary) 1px solid;
     background-color: var(--primary);
@@ -264,19 +277,16 @@ section {
     justify-content: center;
     align-items: center;
     color: white;
-    position: absolute;
-    /* left: -1%; */
+    position: absolute;    
     left: -2%;
 }
-
-/*   fin du test des chiffres blanc dans le petit cercle mauve */
+/*   fin chiffres blanc dans le petit cercle mauve */
 
 
 /*      ---  RESTAURANTS ---      */
 
 .restaurant_gallery {
     padding: 20px;
-
 }
 
 .card {
@@ -315,7 +325,6 @@ section {
     justify-content: space-between;
     position: relative;
 }
-
 
 .coeur,
 .coeur2 {
@@ -399,12 +408,12 @@ footer a {
 /*  min with desktop : 1024px environ */
 @media screen and (min-width: 1024px) {
 
-
     .fonctionnement ol {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
+        margin: 0 20px;
     }
 
     .fonctionnement ol li {
