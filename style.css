@@ -241,6 +241,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
+    margin: 0 20px;
 }
 
 .fonctionnement li {
