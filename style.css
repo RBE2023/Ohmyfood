@@ -260,12 +260,15 @@ section {
 }
 
 .fonctionnement li:hover {
-
-    background-color: #f6f6f61c;
     box-shadow: #0000008c 2px 1px 20px;
     cursor: pointer;
-    transform: scale(1.05);
-}
+    transform: scale(1.05);    
+    }
+
+.fonctionnement li:hover i{      
+        color:#9356DC;
+    }
+
 
 /* chiffres blanc dans le petit cercle mauve */
 .digit {

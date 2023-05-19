@@ -138,12 +138,25 @@ h1 {
     justify-content: space-between;
     margin-top: 8px;
     white-space: nowrap;
-}
+    /* text-overflow: ellipsis;     */
+} 
+
 
 .rectangleMenu span {
     text-overflow: ellipsis;
     overflow: hidden;
+    margin-right: 80px;
 }
+.titre_plat {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 50px;
+    /* padding-right : 60px; */
+    /* width: 70%; */
+}
+
+
 
 .check-mark-button {
     display: flex;
@@ -157,6 +170,8 @@ h1 {
     right: 0px;
     top: 0px;
     margin-right: -71px;    
+    /* text-overflow: ellipsis; */
+    /* white-space: nowrap; */
 }
 
 .check-mark-button i {
